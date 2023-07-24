@@ -1,4 +1,5 @@
 import { ButtonHTMLAttributes, PropsWithChildren } from 'react'
+import { css } from '../../../../styled-system/css'
 
 export const BUTTON_VARIANT = {
   normal: 'normal',
@@ -12,7 +13,20 @@ export interface ButtonProps extends ButtonHTMLAttributes<PropsWithChildren<HTML
   variant?: ButtonVariant
 }
 
-export const Button = ({ variant = 'normal', children }: ButtonProps) => {
+export const Button = ({ variant = 'normal', children, ...rest }: ButtonProps) => {
   console.log(variant)
-  return <button>{children}</button>
+  return (
+    <button
+      className={css({
+        bg: 'red.300',
+        px: '4',
+        py: '3',
+        borderRadius: 'md',
+        _hover: { bg: 'red.400' },
+      })}
+      {...rest}
+    >
+      {children}
+    </button>
+  )
 }

@@ -1,17 +1,23 @@
 {
-  "name": "vite-component-library-template",
+  "name": "pokemon-ui-kit",
   "private": false,
   "version": "2.0.0",
   "packageManager": "pnpm@8.4.0",
-  "main": "./dist/vite-component-library-template.umd.js",
-  "module": "./dist/vite-component-library-template.es.js",
+  "main": "./dist/pokemon-ui-kit.umd.js",
+  "module": "./dist/pokemon-ui-kit.es.js",
   "types": "./dist/index.d.ts",
   "exports": {
     ".": {
-      "import": "./dist/vite-component-library-template.es.js",
-      "require": "./dist/vite-component-library-template.umd.js"
+      "import": {
+        "types": "./dist/index.d.ts",
+        "default": "./dist/pokemon-ui-kit.es.js"
+      },
+      "require": {
+        "types": "./dist/index.d.ts",
+        "default": "./dist/pokemon-ui-kit.umd.js"
+      }
     },
-    "./dist/style.css": "./dist/style.css"
+    "./dist/index.css": "./dist/index.css"
   },
   "engines": {
     "node": "18"
@@ -24,7 +30,7 @@
     "prettier": "prettier --write \"src/**/*.{ts,tsx,js,mdx}\"",
     "test": "vitest",
     "test:cov": "vitest run --coverage",
-    "prepare": "husky install",
+    "prepare": "husky install && panda codegen",
     "prepack": "json -f package.json -I -e \"delete this.devDependencies; delete this.dependencies\""
   },
   "dependencies": {
@@ -33,6 +39,7 @@
   },
   "devDependencies": {
     "@babel/core": "7.22.5",
+    "@pandacss/dev": "^0.7.0",
     "@storybook/addon-essentials": "7.0.23",
     "@storybook/addon-interactions": "7.0.23",
     "@storybook/addon-links": "7.0.23",

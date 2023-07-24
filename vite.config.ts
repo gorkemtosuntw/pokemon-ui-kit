@@ -13,7 +13,6 @@ const app = async (): Promise<UserConfigExport> => {
         insertTypesEntry: true,
       }),
     ],
-
     build: {
       lib: {
         entry: path.resolve(__dirname, 'src/lib/index.ts'),
@@ -27,6 +26,10 @@ const app = async (): Promise<UserConfigExport> => {
           globals: {
             react: 'React',
             'react-dom': 'ReactDOM',
+          },
+          assetFileNames: (assetInfo) => {
+            if (assetInfo.name == 'style.css') return 'index.css'
+            return 'assets/[name]-[hash][extname]'
           },
         },
       },
