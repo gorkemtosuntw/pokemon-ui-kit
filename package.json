@@ -1,7 +1,7 @@
 {
   "name": "pokemon-ui-kit",
   "private": false,
-  "version": "2.0.0",
+  "version": "1.0.0",
   "packageManager": "pnpm@8.4.0",
   "main": "./dist/pokemon-ui-kit.umd.js",
   "module": "./dist/pokemon-ui-kit.es.js",

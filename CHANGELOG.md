@@ -1,5 +1,13 @@
 # Changelog
 
+## 1.0.0 (2023-07-24)
+
+
+### Features
+
+* add panda css ([e57c33c](https://github.com/gorkemtosuntw/pokemon-ui-kit/commit/e57c33c0072f4328fe202333593c936c53d7fe9a))
+* remove tailwind and example components ([39d2925](https://github.com/gorkemtosuntw/pokemon-ui-kit/commit/39d2925a6b4793c579acd43500faa5fc32979897))
+
 ## [2.0.0](https://github.com/IgnacioNMiranda/vite-component-library-template/compare/v1.5.11...v2.0.0) (2023-06-26)
 
 
